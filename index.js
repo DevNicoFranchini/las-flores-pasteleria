@@ -64,7 +64,7 @@ const productosInactivos = [];
 function elegirProductos() {
   let productoSeleccionado = parseInt(
     prompt(
-      `${nombreUsuario}, ingrese 1 para torta\nIngrese 2 para budin\nIngrese 3 para pan\nIngrese 4 para tarta\nIngrese 5 para galleta\nIngrese 6 para helado\nPuede elegir hasta 3 productos.`
+      `${nombreUsuario}, ingrese 1 para ${torta.nombre} - $${torta.precio}\nIngrese 2 para ${budin.nombre} - $${budin.precio}\nIngrese 3 para ${pan.nombre} - $${pan.precio} \nIngrese 4 para ${tarta.nombre} - $${tarta.precio} \nIngrese 5 para ${galleta.nombre} - $${galleta.precio} \nIngrese 6 para ${helado.nombre} - $${helado.precio} \nPuede elegir hasta 3 productos.`
     )
   );
 
