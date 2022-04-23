@@ -34,15 +34,20 @@ main {
 /* LOGO */
 .logo {
   width: auto;
-  height: 22rem;
+  height: 20rem;
+}
+
+.logo-nav {
+  height: 5rem;
+  width: auto;
 }
 
 .row--logo {
-  height: 50%;
+  height: 40%;
 }
 
 .row--form {
-  height: 50%;
+  height: 60%;
 }
 
 /* FORM */
@@ -92,6 +97,76 @@ form input[type="tel"] {
 }
 
 .datos {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ------------------------------------ PRODUCTOS ------------------------------------ */
+.card {
+  width: 25rem;
+  height: 45rem;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
+  background-color: #f2f2f2;
+}
+
+.card-title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.card-text {
+  font-size: 1.2rem;
+}
+
+.precio {
+  font-size: 1.5rem;
+}
+
+.tortas {
+  height: auto;
+  width: 24rem;
+  box-shadow: 0px 0px 2px 0.5px rgba(0, 0, 0, 0.6);
+}
+
+.agregar-carrito {
+  width: 12rem;
+  height: 4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  background-color: #d99c9c;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.2rem;
+}
+
+.agregar-carrito:hover {
+  background-color: #678c5d;
+}
+
+.icon-cart {
+  font-size: 2.5rem;
+}
+
+.icons {
+  font-size: 2rem;
+}
+
+.instagram {
+  font-size: 2rem;
+}
+
+.header {
+  background-color: rgba(242, 242, 242, 0.25);
+  height: 10vh;
+}
+
+.footer {
+  background-color: rgba(242, 242, 242, 0.25);
+  height: 10vh;
+}
+
+.saludo {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;

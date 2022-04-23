@@ -111,11 +111,20 @@ console.log(productosInactivos); */
 
 // Inicio
 
-let usuario = document.getElementById("usuario");
+let nombreUsuario = document.getElementById("nombre");
 
-usuario.onblur = () => {
-  var x = document.getElementById("usuario");
+nombreUsuario.onblur = () => {
+  var x = document.getElementById("nombre");
   x.value = x.value.toLowerCase();
+  x.value = x.value[0].toUpperCase() + x.value.slice(1);
+};
+
+let apellidoUsuario = document.getElementById("apellido");
+
+apellidoUsuario.onblur = () => {
+  var x = document.getElementById("apellido");
+  x.value = x.value.toLowerCase();
+  x.value = x.value[0].toUpperCase() + x.value.slice(1);
 };
 
 let datos = document.getElementById("datos");
@@ -126,12 +135,15 @@ miForm.addEventListener("submit", delayChangePage);
 
 function validarForm(e) {
   e.preventDefault();
-  datos.innerHTML = `¡Bienvenido ${usuario.value}, que disfrute su compra!`;
-  console.log(`El usuario ingresado fue ${usuario.value}`);
+  localStorage.setItem("nombreUsuario", nombreUsuario.value);
+  datos.innerHTML = `¡Bienvenido ${nombreUsuario.value}, que disfrute su compra! En breve será redirigido a la sección de compras.`;
+  console.log(
+    `El usuario ingresado fue ${nombreUsuario.value} ${apellidoUsuario.value}`
+  );
 }
 
 function delayChangePage() {
   setTimeout(function changePage() {
     document.location.href = "./pages/productos.html";
-  }, 2000);
+  }, 3500);
 }

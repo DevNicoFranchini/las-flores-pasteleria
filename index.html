@@ -29,13 +29,24 @@
         <div class="row row--form align-items-start">
           <form id="formulario" class="form" action="pages/productos.html">
             <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nombre:</label>
+              <input
+                type="text"
+                required
+                class="form-control"
+                id="nombre"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label"
-                >Nombre y Apellido:</label
+                >Apellido:</label
               >
               <input
                 type="text"
+                required
                 class="form-control"
-                id="usuario"
+                id="apellido"
                 aria-describedby="emailHelp"
               />
             </div>
@@ -43,6 +54,7 @@
               <label for="phone" class="form-label">Número de celular:</label>
               <input
                 type="tel"
+                required
                 class="form-control"
                 id="phone"
                 pattern="^[0-9]+"
@@ -58,7 +70,7 @@
               Ingresar
             </button>
           </form>
-          <div class="datos" id="datos" class="pt-3"></div>
+          <div class="pt-3 datos" id="datos"></div>
         </div>
       </div>
     </main>
@@ -71,6 +83,6 @@
     ></script>
 
     <!-- JS -->
-    <script src="./index.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
