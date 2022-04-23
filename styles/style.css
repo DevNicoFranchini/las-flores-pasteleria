@@ -16,13 +16,13 @@ html {
 /* HOME */
 .home {
   background-color: #f2c4da;
-  height: 100vh;
+  height: 100%;
   width: auto;
 }
 
 /* MAIN */
 main {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 
@@ -103,11 +103,13 @@ form input[type="tel"] {
 }
 
 /* ------------------------------------ PRODUCTOS ------------------------------------ */
-/* .card {
+.card {
   width: 25rem;
   height: 45rem;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
   background-color: #f2f2f2;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .card-title {
@@ -138,7 +140,7 @@ form input[type="tel"] {
   background-color: #d99c9c;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 0.2rem;
-} */
+}
 
 .agregar-carrito:hover {
   background-color: #678c5d;
@@ -163,11 +165,53 @@ form input[type="tel"] {
 
 .footer {
   background-color: rgba(242, 242, 242, 0.25);
-  height: 10vh;
+  height: 8vh;
 }
 
 .saludo {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+}
+
+/* ------------------------------------ CARRITO ------------------------------------ */
+table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.2rem;
+  height: auto;
+  width: 100%;
+  background-color: rgba(242, 242, 242, 0.25);
+}
+
+th {
+  font-size: 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+td {
+  font-size: 1.25rem;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.agregar {
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  padding: 0;
+  height: auto;
+  background-color: #678c5d;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.agregar:hover {
+  background-color: green;
+}
+
+.quitar {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #d95f8c;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }

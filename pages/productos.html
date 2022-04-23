@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="../styles/style.css" />
   </head>
 
-  <body>
+  <body class="home">
     <!-- HEADER -->
     <header>
-      <div class="navbar navbar-light fixed-top header">
+      <div class="navbar navbar-light position-relative header">
         <div class="container d-flex justify-content-between">
           <img src="../imgs/logo.png" class="logo-nav" alt="" />
           <div class="saludo" id="saludo"></div>
@@ -35,41 +35,58 @@
     </header>
 
     <!-- MAIN -->
-    <main>
-      <div class="container">
-        <h1>Tortas</h1>
-        <hr />
-
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Item</th>
-              <th scope="col">Cantidad</th>
-              <th scope="col">Acción</th>
-              <th scope="col">Total</th>
-            </tr>
-          </thead>
-          <tbody id="items"></tbody>
-          <tfoot>
-            <tr id="footer">
-              <th scope="row" colspan="5">
-                Carrito vacío - comience a comprar!
-              </th>
-            </tr>
-          </tfoot>
-        </table>
-        <div class="row" id="cards"></div>
+    <main
+      class="d-flex flex-column justify-content-evenly align-items-evenly my-5"
+    >
+      <div
+        class="container d-flex flex-column justify-content-evenly align-items-evenly"
+      >
+        <!-- CARDS -->
+        <div
+          class="row w-100 d-flex justify-content-evenly mb-5"
+          id="cards"
+        ></div>
+        <!-- CARRITO -->
+        <div class="d-flex justify-content-center">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Acción</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody id="items"></tbody>
+            <tfoot>
+              <tr id="footer">
+                <th scope="row" colspan="5">
+                  Carrito vacío - comience a comprar!
+                </th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
       </div>
 
       <template id="template-card">
-        <div class="col-12 col-md-4 mb-2">
+        <div
+          class="col-12 col-md-6 col-xl-4 mb-2 d-flex justify-content-center gy-5"
+        >
           <div class="card">
-            <div class="card-body">
-              <img src="" alt="" class="card-img-top" />
-              <h5>Titulo</h5>
-              <p>Precio</p>
-              <button class="btn btn-dark">Comprar</button>
+            <div class="py-1 d-flex justify-content-center">
+              <img src="" alt="" class="card-img-top tortas" />
+            </div>
+            <div
+              class="card-body d-flex flex-column justify-content-evenly align-items-center"
+            >
+              <h3 class="card-title">Titulo</h3>
+              <p class="card-text precio">$<span>Precio</span></p>
+              <h4 class="card-text">Description</h4>
+              <button class="btn btn-dark agregar-carrito">
+                ¡Añadir al carrito!
+              </button>
             </div>
           </div>
         </div>
@@ -81,8 +98,8 @@
           <td>Café</td>
           <td>1</td>
           <td>
-            <button class="btn btn-info btn-sm">+</button>
-            <button class="btn btn-danger btn-sm">-</button>
+            <button class="btn btn-info btn-sm agregar">+</button>
+            <button class="btn btn-danger btn-sm quitar">-</button>
           </td>
           <td>$ <span>500</span></td>
         </tr>
@@ -103,7 +120,7 @@
     <!-- FOOTER -->
     <footer>
       <div
-        class="container-fluid fixed-bottom d-flex justify-content-center align-items-center footer"
+        class="container-fluid position-relative start-0 d-flex justify-content-center align-items-center footer"
       >
         <div class="row align-items-center">
           <div class="col-6 pe-5">

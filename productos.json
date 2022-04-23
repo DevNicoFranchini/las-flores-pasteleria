@@ -3,19 +3,21 @@
     "id": 1,
     "precio": 500,
     "title": "Torta de Frutilla",
-    "image": "../imgs/tortas/frutilla.jpg"
-    
+    "image": "../imgs/tortas/frutilla.jpg",
+    "description": "Riquisima torta de frutilla con base de bizcochuelo y decoración de merengue a elección."
   },
   {
     "id": 2,
     "precio": 1000,
     "title": "Lemon Pie",
-    "image": "../imgs/tortas/lemon.jpg"
+    "image": "../imgs/tortas/lemon.jpg",
+    "description": "Clásica torta lemon pie con base de bizcochuelo y decoración de copitos merengue."
   },
   {
     "id": 3,
     "precio": 1500,
     "title": "Torta de Coco",
-    "image": "../imgs/tortas/coco.jpg"
+    "image": "../imgs/tortas/coco.jpg",
+    "description": " A lo seguro. Torta de ricota bien fresquita con decoración de dulce de leche. ¡Ideal para los mates!."
   }
 ]
