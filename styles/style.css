@@ -103,7 +103,7 @@ form input[type="tel"] {
 }
 
 /* ------------------------------------ PRODUCTOS ------------------------------------ */
-.card {
+/* .card {
   width: 25rem;
   height: 45rem;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
@@ -138,7 +138,7 @@ form input[type="tel"] {
   background-color: #d99c9c;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 0.2rem;
-}
+} */
 
 .agregar-carrito:hover {
   background-color: #678c5d;

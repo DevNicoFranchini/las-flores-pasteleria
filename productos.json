@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "precio": 500,
+    "title": "Torta de Frutilla",
+    "image": "../imgs/tortas/frutilla.jpg"
+    
+  },
+  {
+    "id": 2,
+    "precio": 1000,
+    "title": "Lemon Pie",
+    "image": "../imgs/tortas/lemon.jpg"
+  },
+  {
+    "id": 3,
+    "precio": 1500,
+    "title": "Torta de Coco",
+    "image": "../imgs/tortas/coco.jpg"
+  }
+]
