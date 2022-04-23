@@ -120,11 +120,18 @@ usuario.onblur = () => {
 
 let datos = document.getElementById("datos");
 let miForm = document.getElementById("formulario");
+
 miForm.addEventListener("submit", validarForm);
+miForm.addEventListener("submit", delayChangePage);
 
 function validarForm(e) {
   e.preventDefault();
-  datos.innerHTML = `¡Datos ingresados correctamente!
-  Bienvenido ${usuario.value}`;
+  datos.innerHTML = `¡Bienvenido ${usuario.value}, que disfrute su compra!`;
   console.log(`El usuario ingresado fue ${usuario.value}`);
+}
+
+function delayChangePage() {
+  setTimeout(function changePage() {
+    document.location.href = "./pages/productos.html";
+  }, 2000);
 }

@@ -27,7 +27,7 @@
           <img class="logo" src="./imgs/logo.png" alt="" />
         </div>
         <div class="row row--form align-items-start">
-          <form id="formulario" class="form">
+          <form id="formulario" class="form" action="pages/productos.html">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label"
                 >Nombre y Apellido:</label
@@ -49,7 +49,12 @@
               />
             </div>
 
-            <button type="submit" class="btn btn-dark submit" value="Enviar">
+            <button
+              type="submit"
+              class="btn btn-dark submit"
+              value="Enviar"
+              id="submit"
+            >
               Ingresar
             </button>
           </form>
@@ -65,6 +70,7 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- JS -->
     <script src="./index.js"></script>
   </body>
 </html>
