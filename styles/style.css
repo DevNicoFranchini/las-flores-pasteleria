@@ -1,0 +1,98 @@
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap");
+body,
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HOME */
+.home {
+  background-color: #f2c4da;
+  height: 100vh;
+  width: auto;
+}
+
+/* MAIN */
+main {
+  height: 100vh;
+  width: 100vw;
+}
+
+.home--container {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* LOGO */
+.logo {
+  width: auto;
+  height: 22rem;
+}
+
+.row--logo {
+  height: 50%;
+}
+
+.row--form {
+  height: 50%;
+}
+
+/* FORM */
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  color: #678c5d;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: rem;
+}
+
+form input[type="text"],
+form input[type="tel"] {
+  height: auto;
+  width: 25rem;
+  border: 1px solid #d99c9c;
+  border-radius: 0.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  color: black;
+  padding-left: 0.8rem;
+  margin: 0.1rem 0 0.1rem 0;
+}
+
+.submit {
+  height: 3rem;
+  width: 8rem;
+  border: 1px solid #f2f2f2;
+  border-radius: 0.2rem;
+  background-color: #678c5d;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.submit:hover {
+  cursor: pointer;
+  color: #f2f2f2;
+}
+
+.datos {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
