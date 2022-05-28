@@ -127,7 +127,7 @@ const pintarFooter = () => {
 
   const btnVaciar = document.getElementById("vaciar-carrito");
   btnVaciar.addEventListener("click", () => {
-    carrito = {};
+    vaciarCarrito();
     pintarCarrito();
     pintarOrden();
   });
@@ -208,5 +208,16 @@ enviarPedido.addEventListener("click", () => {
     timer: 3500,
     width: "50rem",
     background: "#f2c4da",
+  }).then(() => {
+    vaciarCarrito();
+    pintarCarrito();
+    pintarOrden();
+    location.reload();
+    window.scrollTo(0, 0);
   });
+
+  const vaciarCarrito = () => {
+    carrito = {};
+    localStorage.removeItem(carrito);
+  };
 });
