@@ -3,11 +3,18 @@ saludo.innerHTML = `¡Hola ${persona}! ¿Qué vas a llevar hoy?`;
 
 const cards = document.getElementById("cards");
 const items = document.getElementById("items");
+const itemsOrden = document.getElementById("items-orden");
 const footer = document.getElementById("footer");
+const footerOrden = document.getElementById("footer-orden");
 const templateCard = document.getElementById("template-card").content;
 const templateFooter = document.getElementById("template-footer").content;
+const templateFooterOrden = document.getElementById(
+  "template-footer-orden"
+).content;
 const templateCarrito = document.getElementById("template-carrito").content;
+const templateOrden = document.getElementById("template-orden").content;
 const fragment = document.createDocumentFragment();
+const enviarPedido = document.getElementById("enviar-pedido");
 let carrito = {};
 
 // Carrito
@@ -16,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("carrito")) {
     carrito = JSON.parse(localStorage.getItem("carrito"));
     pintarCarrito();
+    pintarOrden();
   }
 });
 cards.addEventListener("click", (e) => {
@@ -71,6 +79,7 @@ const setCarrito = (objeto) => {
 
   carrito[producto.id] = { ...producto };
   pintarCarrito();
+  pintarOrden();
 };
 
 const pintarCarrito = () => {
@@ -120,7 +129,32 @@ const pintarFooter = () => {
   btnVaciar.addEventListener("click", () => {
     carrito = {};
     pintarCarrito();
+    pintarOrden();
   });
+};
+
+const pintarFooterOrden = () => {
+  footerOrden.innerHTML = "";
+  if (Object.keys(carrito).length === 0) {
+    footerOrden.innerHTML = `<th scope="row" colspan="5"> Carrito vacío - comience a comprar!</th>`;
+    return;
+  }
+
+  const nCantidad = Object.values(carrito).reduce(
+    (acc, { cantidad }) => acc + cantidad,
+    0
+  );
+  const nPrecio = Object.values(carrito).reduce(
+    (acc, { cantidad, precio }) => acc + cantidad * precio,
+    0
+  );
+
+  templateFooterOrden.querySelectorAll("td")[0].textContent = nCantidad;
+  templateFooterOrden.querySelector("span").textContent = nPrecio;
+
+  const clone = templateFooterOrden.cloneNode(true);
+  fragment.appendChild(clone);
+  footerOrden.appendChild(fragment);
 };
 
 const btnAccion = (e) => {
@@ -129,6 +163,7 @@ const btnAccion = (e) => {
     producto.cantidad++;
     carrito[e.target.dataset.id] = { ...producto };
     pintarCarrito();
+    pintarOrden();
   }
 
   if (e.target.classList.contains("btn-danger")) {
@@ -138,7 +173,40 @@ const btnAccion = (e) => {
       delete carrito[e.target.dataset.id];
     }
     pintarCarrito();
+    pintarOrden();
   }
 
   e.stopPropagation();
 };
+
+const pintarOrden = () => {
+  itemsOrden.innerHTML = "";
+  Object.values(carrito).forEach((producto) => {
+    templateOrden.querySelector("th").textContent = producto.id;
+    templateOrden.querySelectorAll("td")[0].textContent = producto.title;
+    templateOrden.querySelectorAll("td")[1].textContent = producto.cantidad;
+    templateOrden.querySelector("span").textContent =
+      producto.cantidad * producto.precio;
+    const clone = templateOrden.cloneNode(true);
+    fragment.appendChild(clone);
+  });
+  itemsOrden.appendChild(fragment);
+
+  pintarFooterOrden();
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+};
+
+enviarPedido.addEventListener("click", () => {
+  Swal.fire({
+    position: "center",
+    icon: "success",
+    iconColor: "black",
+    title: `¡${persona} su pedido fue enviado, que lo disfrute!`,
+    color: "black",
+    showConfirmButton: false,
+    timer: 3500,
+    width: "50rem",
+    background: "#f2c4da",
+  });
+});
