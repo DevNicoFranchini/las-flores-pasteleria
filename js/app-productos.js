@@ -216,8 +216,10 @@ enviarPedido.addEventListener("click", () => {
     window.scrollTo(0, 0);
   });
 
-  const vaciarCarrito = () => {
-    carrito = {};
-    localStorage.removeItem(carrito);
-  };
+  vaciarCarrito();
 });
+
+const vaciarCarrito = () => {
+  carrito = {};
+  localStorage.removeItem(carrito);
+};
