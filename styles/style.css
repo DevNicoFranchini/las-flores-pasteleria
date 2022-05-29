@@ -221,3 +221,22 @@ td {
   background-color: #d95f8c;
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
+
+.contador-productos {
+  position: absolute;
+  color: var(--bs-white);
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: none;
+  margin-top: 17.5px;
+  margin-left: 1.5px;
+}
+
+.icon-cart {
+  font-size: 3.5rem;
+}
+
+.btn.btn-link {
+  background-color: none;
+  color: var(--bs-black);
+}

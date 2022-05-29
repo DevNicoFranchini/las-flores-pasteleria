@@ -84,6 +84,7 @@ const setCarrito = (objeto) => {
 
 const pintarCarrito = () => {
   items.innerHTML = "";
+  let cantidadElementos = 0;
   Object.values(carrito).forEach((producto) => {
     templateCarrito.querySelector("th").textContent = producto.id;
     templateCarrito.querySelectorAll("td")[0].textContent = producto.title;
@@ -92,10 +93,14 @@ const pintarCarrito = () => {
     templateCarrito.querySelector(".btn-danger").dataset.id = producto.id;
     templateCarrito.querySelector("span").textContent =
       producto.cantidad * producto.precio;
+
+    cantidadElementos += producto.cantidad;
     const clone = templateCarrito.cloneNode(true);
+
     fragment.appendChild(clone);
   });
   items.appendChild(fragment);
+  hintCantidadProductos.textContent = cantidadElementos;
 
   pintarFooter();
 

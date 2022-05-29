@@ -31,7 +31,19 @@
         <div class="container d-flex justify-content-between">
           <img src="../imgs/logo.png" class="logo-nav" alt="" />
           <div class="saludo" id="saludo"></div>
-          <i class="bi bi-cart-fill icon-cart"></i>
+          <button
+            type="button"
+            class="btn btn-link d-flex d-col justify-content-center"
+            data-bs-toggle="modal"
+            data-bs-target="#modalCart"
+          >
+            <div class="contador-productos">
+              <span id="hintCantidadProductos" class=""></span>
+            </div>
+            <div>
+              <i class="bi bi-cart-fill icon-cart"></i>
+            </div>
+          </button>
         </div>
       </div>
     </header>
