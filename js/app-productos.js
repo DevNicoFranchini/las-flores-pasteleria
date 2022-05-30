@@ -61,6 +61,15 @@ const pintarCards = (data) => {
 const addCarrito = (e) => {
   if (e.target.classList.contains("btn-dark")) {
     setCarrito(e.target.parentElement);
+
+    Swal.fire({
+      position: "bottom-end",
+      icon: "success",
+      width: "20rem",
+      showConfirmButton: false,
+      title: `Añadido al carrito`,
+      timer: 1000,
+    });
   }
   e.stopPropagation();
 };

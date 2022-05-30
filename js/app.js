@@ -31,7 +31,7 @@ function validarForm(e) {
     position: "center",
     icon: "success",
     title: `¡Bienvenido ${nombreUsuario.value}, que disfrute su compra!
-    En breve será redirigido a la sección de compras.`,
+    En breve ingresará a la sección de compras.`,
     showConfirmButton: false,
     timer: 3500,
     width: "50rem",
